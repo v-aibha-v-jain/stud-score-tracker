@@ -36,7 +36,8 @@ function cal_sgpa_back(){
   sgpa_cal_div.classList.remove('appear');
   sgpa_cal_div.classList.add('disappear');
   show_sgpa.style.display="none";
-  
+  const body = document.getElementById('sgpa_cal_course-table_body');
+  body.innerHTML = '';
   setTimeout(()=>{
     choose.style.display="flex";
     choose.classList.add('appear');
@@ -44,9 +45,8 @@ function cal_sgpa_back(){
 }
 function cal_cgpa_back(){
   document.getElementById('cgpa_cal_nofsem').value = "";
-  for (let i = 1; i <= sems; i++) {
-    
-  }
+  const body = document.getElementById('sems_sgpa_tb');
+  body.innerHTML = '';
   cgpa_cal_div.classList.remove('appear');
   cgpa_cal_div.classList.add('disappear');
   not_bad.style.display="none";
@@ -66,7 +66,7 @@ const marksInput    = document.getElementById('sgpa_cal_marks');
 const addButton     = document.getElementById('sgpa_cal_add-button');
 const Calculatesgpa = document.getElementById('cal_sgpa');
 const courseTable   = document.getElementById('sgpa_cal_course-table');
-const tableBody     = document.getElementById('sgpa_cal_tbody');
+const tableBody     = document.getElementById('sgpa_cal_course-table_body');
 const show_sgpa     = document.getElementById('sgpa-not-bad');
 const sgpa_disp     = document.getElementById('show-sgpa');
 var tcredits      = 0;
@@ -140,6 +140,7 @@ cgpa_nofsem.addEventListener('click', ()=>{
     inputField.classList.add('sem'+i);
     tableRow.appendChild(td1);
     tableRow.appendChild(td2);
+    tableRow.classList.add('cgpa_row'+i)
     body_input_cgpa.appendChild(tableRow);
   }
 });
