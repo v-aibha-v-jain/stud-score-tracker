@@ -33,27 +33,29 @@ function choosecgpa() {
 ///////////////////// BACK TO MAIN PAGE ///////////////////////
 ///////////////////////////////////////////////////////////////
 function cal_sgpa_back(){
-  sgpa_cal_div.classList.remove('appear');
-  sgpa_cal_div.classList.add('disappear');
-  show_sgpa.style.display="none";
-  const body = document.getElementById('sgpa_cal_course-table_body');
-  body.innerHTML = '';
-  setTimeout(()=>{
-    choose.style.display="flex";
-    choose.classList.add('appear');
-  }, 1500);
+  // sgpa_cal_div.classList.remove('appear');
+  // sgpa_cal_div.classList.add('disappear');
+  // show_sgpa.style.display="none";
+  // const body = document.getElementById('sgpa_cal_course-table_body');
+  // body.innerHTML = '';
+  // setTimeout(()=>{
+  //   choose.style.display="flex";
+  //   choose.classList.add('appear');
+  // }, 1500);
+  window.location.reload();
 }
 function cal_cgpa_back(){
-  document.getElementById('cgpa_cal_nofsem').value = "";
-  const body = document.getElementById('sems_sgpa_tb');
-  body.innerHTML = '';
-  cgpa_cal_div.classList.remove('appear');
-  cgpa_cal_div.classList.add('disappear');
-  not_bad.style.display="none";
-  setTimeout(()=>{
-    choose.style.display="flex";
-    choose.classList.add('appear');
-  }, 1500);
+  // document.getElementById('cgpa_cal_nofsem').value = "";
+  // const body = document.getElementById('sems_sgpa_tb');
+  // body.innerHTML = '';
+  // cgpa_cal_div.classList.remove('appear');
+  // cgpa_cal_div.classList.add('disappear');
+  // not_bad.style.display="none";
+  // setTimeout(()=>{
+  //   choose.style.display="flex";
+  //   choose.classList.add('appear');
+  // }, 1500);
+  window.location.reload();
 }
 
 
