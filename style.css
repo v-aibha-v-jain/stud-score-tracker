@@ -1,0 +1,87 @@
+body{ background-color: rgb(9, 173, 119); }
+
+.fcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#choose{
+    flex-direction: column;
+}
+
+#choose button{
+    width: 60%;
+    margin: 2vw;
+    font-size: 4vw;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 25vh;
+    border-radius: 2vw;
+    background-color:rgb(144, 245, 245);   
+    cursor: pointer;
+}
+
+.disappear {
+    animation: disappear 2s ease-in-out forwards;
+}
+@keyframes disappear {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(100%);
+        display: none;
+    }
+}
+
+.appear{
+    animation: appear 2s ease-in-out forwards;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#sgpa_calculator{
+    display: none;
+    background-color: rgb(144, 245, 245);
+    padding: 1vw;
+    border-radius: 2vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sgpa-input-fields{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+#sgpa_cal_course-table, #sgpa_cal_course-table th, #sgpa_cal_course-table td{
+    border: 1px solid grey;
+    padding: 0.5vw;
+}
+
+#sgpa-not-bad{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
