@@ -11,7 +11,7 @@
     <!-- choose operation that you want to perform -->
     <div id="choose" class="fcc">
         <button onclick="choosesgpa()"><p>Calculate SGPA</p></button>
-        <button><p>Calculate CGPA</p></button>
+        <button onclick="choosecgpa()"><p>Calculate CGPA</p></button>
         <button><p>Stud Routine And Target Advisor</p></button>
     </div>
 
@@ -19,25 +19,25 @@
     <div id="sgpa_calculator">
         <h2>SGPA Calculator</h2>
         <div id="sgpa-input-fields">
-          <label for="sgpa_cal_subject">Subject name:</label>
-          <input type="text" id="sgpa_cal_subject" placeholder="Enter Subject Name">
-          <label for="sgpa_cal_credits">Credits:</label>
-          <input type="number" id="sgpa_cal_credits" placeholder="Enter Credits (Number)">
-          <label for="sgpa_cal_marks">Marks:</label>
-          <input type="number" id="sgpa_cal_marks" placeholder="Enter Marks (Number)">
+            <label for="sgpa_cal_subject">Subject name:</label>
+            <input type="text" id="sgpa_cal_subject" placeholder="Enter Subject Name">
+            <label for="sgpa_cal_credits">Credits:</label>
+            <input type="number" id="sgpa_cal_credits" placeholder="Enter Credits (Number)">
+            <label for="sgpa_cal_marks">Marks:</label>
+            <input type="number" id="sgpa_cal_marks" placeholder="Enter Marks (Number)">
         </div><br>
         <button id="sgpa_cal_add-button">Add Course</button><br>
         <table id="sgpa_cal_course-table">
-          <thead id="sgpa_cal_tbody">
-            <tr>
-              <th>Subject</th>
-              <th>Credits</th>
-              <th>Marks</th>
-              <th>Points</th>
-              <th>Credit Scored</th>
-            </tr>
-          </thead>
-          <tbody>
+            <thead id="sgpa_cal_tbody">
+                <tr>
+                    <th>Subject</th>
+                    <th>Credits</th>
+                    <th>Marks</th>
+                    <th>Points</th>
+                    <th>Credit Scored</th>
+                </tr>
+            </thead>
+            <tbody>
             </tbody>
         </table>
         <br>
@@ -50,6 +50,36 @@
     <div id="sgpa-not-bad">
         <p id="show-sgpa">YOUR SGPA : </p>
         <img src="not-bad.gif">
+    </div>
+
+    <!-- calculate cgpa -->
+    <div id="cgpa_div">
+        <h3>CGPA Calculator</h3>
+        <div class="cgpa-input-fields">
+            <label for="cgpa_cal_nofsem">Enter the number of semisters :</label>
+            <input type="number" id="cgpa_cal_nofsem" placeholder="Enter the number of sems">
+            <button id="cgpa_cal_create_table">Enter</button>
+        </div>
+        <br>
+        <table id="cgpa_cal_course-table">
+            <thead id="cgpa_cal_tbody">
+                <tr>
+                    <th>Semister</th>
+                    <th>SGPA</th>
+                </tr>
+            </thead>
+            <tbody id="sems_sgpa_tb">
+            </tbody>
+        </table>
+        <br>
+        <button id="cal_cgpa">Calculate CGPA</button>
+        <br>
+        <button onclick="cal_cgpa_back()">👈Back</button>
+    </div>
+    <!-- not bad -->
+    <div id="cgpa-not-bad">
+      <p id="show_cgpa">YOUR CGPA : </p>
+      <img src="not-bad.gif">
     </div>
 </body>
 </html>

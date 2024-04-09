@@ -59,7 +59,7 @@ body{ background-color: rgb(9, 173, 119); }
     }
 }
 
-#sgpa_calculator{
+#sgpa_calculator, #cgpa_div{
     display: none;
     background-color: rgb(144, 245, 245);
     padding: 1vw;
@@ -74,12 +74,19 @@ body{ background-color: rgb(9, 173, 119); }
     grid-template-columns: repeat(2,1fr);
 }
 
-#sgpa_cal_course-table, #sgpa_cal_course-table th, #sgpa_cal_course-table td{
+#sgpa_cal_course-table, #sgpa_cal_course-table th, #sgpa_cal_course-table td, #cgpa_cal_course-table, #cgpa_cal_course-table th, #cgpa_cal_course-table td{
     border: 1px solid grey;
     padding: 0.5vw;
 }
 
 #sgpa-not-bad{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cgpa-not-bad{
     display: none;
     flex-direction: column;
     align-items: center;
