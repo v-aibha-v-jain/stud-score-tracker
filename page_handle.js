@@ -4,6 +4,7 @@
 const choose       = document.getElementById('choose');
 const sgpa_cal_div = document.getElementById('sgpa_calculator');
 const cgpa_cal_div = document.getElementById('cgpa_div');
+const stud_rout_targ_div = document.getElementById('stud_rout_div');
 
 
 ///////////////////////////////////////////////////////////////
@@ -25,6 +26,15 @@ function choosecgpa() {
   setTimeout(()=>{
     cgpa_cal_div.style.display = "flex";
     cgpa_cal_div.classList.add('appear');
+  }, 1500);
+}
+function stud_rout() {
+  choose.classList.remove('appear');
+  choose.classList.add('disappear');
+  
+  setTimeout(()=>{
+    stud_rout_targ_div.style.display = "flex";
+    stud_rout_targ_div.classList.add('appear');
   }, 1500);
 }
 
@@ -50,6 +60,14 @@ function cal_cgpa_back(){
   cgpa_cal_div.classList.remove('appear');
   cgpa_cal_div.classList.add('disappear');
   not_bad.style.display="none";
+  setTimeout(()=>{
+    choose.style.display="flex";
+    choose.classList.add('appear');
+  }, 1500);
+}
+function stud_rout_back(){
+  stud_rout_targ_div.classList.remove('appear');
+  stud_rout_targ_div.classList.add('disappear');
   setTimeout(()=>{
     choose.style.display="flex";
     choose.classList.add('appear');

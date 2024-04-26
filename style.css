@@ -59,7 +59,7 @@ body{ background-color: rgb(9, 173, 119); }
     }
 }
 
-#sgpa_calculator, #cgpa_div{
+#sgpa_calculator, #cgpa_div, #stud_rout_div{
     display: none;
     background-color: rgb(144, 245, 245);
     padding: 1vw;
@@ -91,4 +91,9 @@ body{ background-color: rgb(9, 173, 119); }
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#stud_rout_div{
+    padding: 15vw;
+    text-align: center;
 }
